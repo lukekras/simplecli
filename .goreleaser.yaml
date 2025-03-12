@@ -50,8 +50,25 @@ changelog:
       - "^test:"
 
 release:
-  footer: >-
+  github:
+    owner: lukekras
+    name: simplecli
+  draft: false
+  prerelease: auto
 
-    ---
+brews:
+  -
+    name: simplecli
+    commit_author:
+      name: goreleaserbot
+      email: bot@goreleaser.com
 
-    Released by [GoReleaser](https://github.com/goreleaser/goreleaser).
+    commit_msg_template: "Brew formula update for {{ .ProjectName }} version {{ .Tag }}"
+
+    homepage: "https://github.com/lukekras"
+    description: "A simple CLI tool to explain automated homebrew deployments"
+    license: "MIT"
+    repository:
+      owner: lukekras
+      name: homebrew-simplecli
+
