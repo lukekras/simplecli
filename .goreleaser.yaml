@@ -72,3 +72,9 @@ brews:
       owner: lukekras
       name: homebrew-simplecli
 
+dockers:
+  -
+    image_templates:
+      - "Docker.io/lkraz/simplecli:{{.Version}}"
+    build_flag_templates:
+      - "--no-cache"
